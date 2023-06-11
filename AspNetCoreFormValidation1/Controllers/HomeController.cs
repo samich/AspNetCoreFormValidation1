@@ -13,10 +13,25 @@ namespace AspNetCoreFormValidation1.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Index(Student student)
+        {
+
+
+            string name = student.Name;
+            ViewData["email"] = student.Email;
+            ViewData["age"] = student.Age;
+
+            return View();
+        }
+
+
 
         public IActionResult Privacy()
         {

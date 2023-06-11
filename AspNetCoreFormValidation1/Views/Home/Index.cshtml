@@ -1,8 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model AspNetCoreFormValidation1.Models.Student
+
+@{
+    ViewData["Title"] = "Form Validation";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="content">
+    <h3 class="mt-4">Form Validation</h3>
+    
+    <form method="post">
+
+        <div class="form-group mt-4 mb-3">
+            <label class="mb-1">Name</label>
+            <input type="text" class="form-control" asp-for="Name"/>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="mb-1">Email</label>
+            <input type="text" class="form-control" asp-for="Email"/>
+        </div>
+
+        <div class="form-group mb-4">
+            <label class="mb-1">Age</label>
+            <input type="text" class="form-control" asp-for="Age"/>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>
 </div>
