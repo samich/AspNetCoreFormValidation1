@@ -23,11 +23,6 @@ namespace AspNetCoreFormValidation1.Controllers
         public IActionResult Index(Student student)
         {
 
-
-            string name = student.Name;
-            ViewData["email"] = student.Email;
-            ViewData["age"] = student.Age;
-
             return View();
         }
 
